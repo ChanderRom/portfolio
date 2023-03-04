@@ -45,7 +45,7 @@ main {
   margin: 0 auto;
 }
 
-.projects {
+.project {
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -57,7 +57,7 @@ main {
   align-items: center;
   flex-flow: column nowrap;
 }
-.projects .projects-title {
+.project .project-title {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -65,7 +65,7 @@ main {
   align-items: center;
   flex-flow: row nowrap;
 }
-.projects .projects-title h1 {
+.project .project-title h1 {
   width: 95%;
   border-bottom: 1px solid;
   font-family: "Voyage";
@@ -76,41 +76,48 @@ main {
   align-items: center;
   flex-flow: row nowrap;
 }
-.projects .projects-title .projects-triangle {
+.project .project-title .project-triangle {
   width: 2rem;
   height: 2rem;
   background-color: black;
   position: relative;
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
-.projects .project-container {
-  width: 90%;
+.project .project-container {
+  width: 92%;
+  height: 5rem;
+  overflow: hidden;
   max-width: 1100px;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   border: 1px solid black;
   margin-top: 3rem;
   box-shadow: rgb(0, 0, 0) 5px 5px 1px;
 }
-.projects .project-container h2 {
+.project .project-container h2 {
   font-family: "Voyage";
   font-size: 2rem;
   font-weight: normal;
-  background-color: black;
-  color: white;
+  width: 100%;
   padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
 }
-.projects .project-container p {
+.project .project-container h2 button {
+  width: 100%;
+  text-align: left;
+}
+.project .project-container p {
   font-family: "Poppins";
   font-size: 1rem;
   font-weight: normal;
   margin-bottom: 1rem;
 }
-.projects .project-container h3 {
+.project .project-container h3 {
   font-family: "Poppins";
   font-size: 1.2rem;
   font-weight: bold;
 }
-.projects .project-container button {
+.project .project-container .github {
   position: relative;
   right: calc(180px - 100%);
   font-family: "Poppins";

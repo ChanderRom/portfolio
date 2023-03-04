@@ -2,7 +2,7 @@
 @forward 'mixins';
 @use 'mixins' as *;
 
-.projects{
+.project{
     width: 100%;
     min-height: 100vh;
     position: relative;
@@ -11,7 +11,7 @@
     overflow: hidden;
     @include flex (flex, start, center, column nowrap);
     
-    .projects-title{
+    .project-title{
         width: 100%;
         margin: 0 auto;
         @include flex (flex, center, center, row nowrap);
@@ -23,7 +23,7 @@
             @include flex (flex, space-between, center, row nowrap);
         }
 
-        .projects-triangle{
+        .project-triangle{
             width: 2rem;
             height: 2rem;
             background-color: black;
@@ -33,18 +33,26 @@
     }
 
     .project-container{
-        width: 90%;
+        width: 92%;
+        height: 5rem;
+        overflow: hidden;
         max-width: 1100px;
-        padding: 2rem;
+        padding: 1rem 2rem 2rem 2rem;
         border: 1px solid black;
         margin-top: 3rem;
         box-shadow: rgba(0, 0, 0, 1) 5px 5px 1px;
         
         h2{
             @include font ('Voyage', 2rem, normal);
-            background-color: black;
-            color: white;
+            width: 100%;
             padding: .5rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            
+            button{
+                width: 100%;
+                text-align: left;
+            }
         }
 
         p{
@@ -56,7 +64,7 @@
             @include font ('Poppins', 1.2rem, bold);
         }
 
-        button{
+        .github{
             position: relative;
             right: calc(180px - 100%);
             @include font ('Poppins', 1rem, normal);
