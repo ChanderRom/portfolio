@@ -1,0 +1,45 @@
+@mixin font ($fam, $s, $w){
+    font-family: $fam;
+    font-size: $s;
+    font-weight: $w;
+}
+@mixin flex ($dis, $just, $align, $flow){
+    display: $dis;
+    justify-content: $just;
+    align-items: $align;
+    flex-flow: $flow;
+}
+
+@mixin grid ($dis, $just, $align, $col){
+    display: $dis;
+    justify-items: $just;
+    align-items: $align;
+    grid-template-columns: $col;
+}
+
+//MEDIA QUERIES
+$breakpoints-width: (
+    xs: 480px,
+    sm: 680px,
+    md: 840px,
+    lg: 1000px
+);
+
+@mixin media-width($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints-width, $breakpoint)){
+        @content
+    }
+}
+
+$breakpoints-height: (
+    xs: 480px,
+    sm: 680px,
+    md: 760px,
+    lg: 1090px
+);
+
+@mixin media-height($breakpoint) {
+    @media screen and (min-height: map-get($breakpoints-height, $breakpoint)){
+        @content
+    }
+}

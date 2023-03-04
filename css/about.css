@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+@font-face {
+  font-family: "Voyage";
+  src: url(../fonts/Voyage.otf);
+}
+element {
+  -ms-overflow-style: none; /* Internet Explorer, Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
+
+element::-webkit-scrollbar {
+  display: none; /* Chrome Safari Opera*/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  text-indent: 0;
+  list-style-type: 0;
+  list-style: none;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.about-me {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.about-me .about-me-title {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.about-me .about-me-title h1 {
+  width: 95%;
+  border-bottom: 1px solid;
+  font-family: "Voyage";
+  font-size: 3rem;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.about-me .about-me-title .about-me-triangle {
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  position: relative;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.about-me .about-me-content {
+  width: 95%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+}
+.about-me .about-me-content .about-me-text {
+  width: 40rem;
+  padding: 5rem;
+  margin-left: -4rem;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: rgb(0, 0, 0) 5px 5px 1px;
+}
+.about-me .about-me-content .about-me-text h1 {
+  width: 100%;
+  text-align: left;
+  border-bottom: unset;
+  font-family: "Voyage";
+  font-size: 3rem;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin-bottom: 1rem;
+}
+.about-me .about-me-content .about-me-text p {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.about-me .about-me-content .about-me-who {
+  width: 16.25rem;
+  min-width: 16.25rem;
+  height: calc(100vh - 58px);
+  overflow: hidden;
+  z-index: -1;
+  background-color: black;
+}
+.about-me .about-me-content .about-me-who h1 {
+  color: black;
+  font-family: "Voyage";
+  font-size: 4rem;
+  font-weight: 200;
+  white-space: nowrap;
+  color: white;
+}
+
+@media screen and (max-width: 680px) {
+  .about-me .about-me-title h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .about-me .about-me-title h1 .about-me-triangle {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .about-me .about-me-content {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about-me .about-me-content .about-me-text {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  .about-me .about-me-content .about-me-text {
+    width: 90%;
+    height: fit-content;
+    position: absolute;
+    padding: 2.5rem;
+    top: 20vh;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-me .about-me-content .about-me-text {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-me .about-me-content .about-me-text p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  .about-me .about-me-content .about-me-who {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (max-width: 680px) {
+  .about-me .about-me-content .about-me-who {
+    width: 100vw;
+    height: calc(100vh - 40px);
+    background-color: white;
+  }
+}
+@media screen and (max-width: 680px) {
+  .about-me .about-me-content .about-me-who h1 {
+    color: black;
+    font-size: 2.5rem;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

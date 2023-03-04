@@ -1,0 +1,60 @@
+@use 'main';
+@use 'mixins' as *;
+
+
+.intro{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    @include flex (flex, center, center, column nowrap);
+
+    .triangle-container{
+        display: flex;
+        flex-flow: row nowrap;
+        font-size: 10rem;
+
+        // TRIANGLES DIMENSIONES & PROPERTIES
+        div{
+            width: 2rem;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include media-width(sm){
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        .triangle-right{
+            background-color: black;
+            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        }
+        
+        .triangle-left{
+            background-color: black;
+            clip-path: polygon(100% 50%, 0 0, 0 98%);
+        }
+    }
+
+    .name-container{
+        @include font ('Voyage', 3rem, normal);
+        position: absolute;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .char{
+        transform: translateY(120px);
+        transition: transform .5s;
+    }
+
+    .cover{
+        background-color: black;
+        width: 100%;
+        max-width: 1500px;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+    }
+}

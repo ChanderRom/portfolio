@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+@font-face {
+  font-family: "Voyage";
+  src: url(../fonts/Voyage.otf);
+}
+element {
+  -ms-overflow-style: none; /* Internet Explorer, Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
+
+element::-webkit-scrollbar {
+  display: none; /* Chrome Safari Opera*/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  text-indent: 0;
+  list-style-type: 0;
+  list-style: none;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.header-container {
+  width: 100%;
+  display: none;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.header-content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: 1rem;
+  padding: 1rem 8rem 0 8rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.header-content .triangle {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+.header-content nav {
+  position: absolute;
+  top: 0;
+  right: 5rem;
+}
+.header-content nav ul {
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  color: white;
+}
+.header-content nav ul li {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.header-content nav div {
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.header-content .header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  font-family: "Voyage";
+  font-size: 3.5rem;
+  font-weight: normal;
+  width: 100%;
+  max-height: 100vh;
+  height: min-content;
+  color: white;
+  line-height: 3.5rem;
+}
+.header-content .header-title .name {
+  width: 100%;
+  position: relative;
+  left: 5%;
+  z-index: 2;
+}
+.header-content .header-title .portrait {
+  width: 60%;
+  min-width: 679px;
+  height: 30rem;
+  margin: -2rem 0 -5rem 0;
+  background-image: url(../img/portrait.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header-content .header-title .full {
+  width: 100%;
+  position: relative;
+  right: 5%;
+  text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-content {
+    padding: 1rem 2rem 0 2rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header-content {
+    padding: 1rem 2rem 0 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-content {
+    padding: 0.2rem 2rem 0 2rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header-content nav, .header-content ul li {
+    font-size: 1rem;
+    top: 5rem;
+    right: 2rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header-content nav, .header-content ul li {
+    display: none;
+  }
+}
+@media screen and (min-height: 760px) {
+  .header-content nav, .header-content ul li {
+    top: 0rem;
+    right: 2rem;
+  }
+}
+@media screen and (min-height: 1090px) {
+  .header-content nav, .header-content ul li {
+    top: 7rem;
+    right: 2rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header-content .header-title {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header-content .header-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-content .header-title {
+    font-size: 2rem;
+    line-height: 1.8rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header-content .header-title .name {
+    left: 0;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header-content .header-title .name {
+    left: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header-content .header-title .right {
+    right: 0;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header-content .header-title .right {
+    right: 0;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header-content .header-title .portrait {
+    width: 100%;
+    height: 35rem;
+    min-width: unset;
+    margin: 0 auto;
+    margin: -4rem 0 -4rem 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-content .header-title .portrait {
+    width: 100%;
+    height: 35rem;
+    min-width: unset;
+    margin: 0 auto;
+    margin: -2rem 0 -2rem 0;
+  }
+}
+@media screen and (max-width: 840px) {
+  .header-content .triangle {
+    left: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-content .triangle {
+    display: none;
+  }
+}
+@media screen and (min-height: 760px) {
+  .header-content .triangle {
+    top: 0;
+    left: 2rem;
+  }
+}
+@media screen and (min-height: 1090px) {
+  .header-content .triangle {
+    top: 7rem;
+    left: 2rem;
+  }
+}
+
+/*# sourceMappingURL=haeder.css.map */

@@ -1,0 +1,68 @@
+@use 'main';
+@forward 'mixins';
+@use 'mixins' as *;
+
+.projects{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    overflow: hidden;
+    @include flex (flex, start, center, column nowrap);
+    
+    .projects-title{
+        width: 100%;
+        margin: 0 auto;
+        @include flex (flex, center, center, row nowrap);
+
+        h1{
+            width: 95%;
+            border-bottom: 1px solid;
+            @include font ('Voyage', 3rem, normal);
+            @include flex (flex, space-between, center, row nowrap);
+        }
+
+        .projects-triangle{
+            width: 2rem;
+            height: 2rem;
+            background-color: black;
+            position: relative;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+    }
+
+    .project-container{
+        width: 90%;
+        max-width: 1100px;
+        padding: 2rem;
+        border: 1px solid black;
+        margin-top: 3rem;
+        box-shadow: rgba(0, 0, 0, 1) 5px 5px 1px;
+        
+        h2{
+            @include font ('Voyage', 2rem, normal);
+            background-color: black;
+            color: white;
+            padding: .5rem;
+        }
+
+        p{
+            @include font ('Poppins', 1rem, normal);
+            margin-bottom: 1rem;
+        }
+        
+        h3{
+            @include font ('Poppins', 1.2rem, bold);
+        }
+
+        button{
+            position: relative;
+            right: calc(180px - 100%);
+            @include font ('Poppins', 1rem, normal);
+            padding: 1rem;
+            border: 1px solid black;
+            box-shadow: rgba(0, 0, 0, 1) 5px 5px 1px;
+        }
+    }
+}

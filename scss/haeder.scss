@@ -1,0 +1,201 @@
+@use 'main';
+@forward 'mixins';
+@use 'mixins' as *;
+
+//CONTAINER PROPERTIES
+.header-container{
+    width: 100%;
+    display: none;
+    margin: 0 auto;
+    background-color: black;
+}
+
+
+//CONTENT
+.header-content{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 1rem;
+    padding: 1rem 8rem 0 8rem;
+    background-color: black;
+    @include flex (flex, center, center, column nowrap);
+
+    .triangle{
+        width: 2rem;
+        height: 2rem;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 5rem;
+        clip-path: polygon(0 0, 0 100%, 100% 0);
+    }
+
+    nav{
+        position: absolute;
+        top: 0;
+        right: 5rem;
+        
+        ul{
+            @include font ('Poppins', 1.2rem, 200);
+            @include flex (flex, center, flex-end, column nowrap);
+            gap: .5rem;
+            color: white;
+
+            li{
+                width: 100%;
+                height: min-content;
+                @include flex (flex, flex-end, center, row nowrap);
+            }
+        }
+
+        div{
+            width: 1rem;
+            height: 1rem;
+            background-color: white;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+    }
+
+    .header-title{
+        @include flex (flex, center, center, column nowrap);
+        @include font ('Voyage', 3.5rem, normal);
+        width: 100%;
+        max-height: 100vh;
+        height: min-content;
+        color: white;
+        line-height: 3.5rem;
+
+        .name{
+            width: 100%;
+            position: relative;
+            left: 5%;
+            z-index: 2;
+        }
+
+        .portrait{
+            width: 60%;
+            min-width: 679px;
+            height: 30rem;
+            margin: -2rem 0 -5rem 0;
+            background-image: url(../img/portrait.jpg);
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .full{
+            width: 100%;
+            position: relative;
+            right: 5%;
+            text-align: right;
+        }
+    }
+}
+
+
+
+
+//MEDIA QUERIES
+.header-content{
+    @include media-width(lg){
+        padding: 1rem 2rem 0 2rem;
+    }
+    @include media-width(md){
+        padding: 1rem 2rem 0 2rem;
+    }
+    @include media-width(xs){
+        padding: .2rem 2rem 0 2rem;
+    }
+
+    nav, ul li{
+        @include media-width(md){
+            font-size: 1rem;
+            top: 5rem;
+            right: 2rem;
+        }
+        @include media-width(sm){
+            display: none;
+        }
+
+        @include media-height(md){
+            top: 0rem;
+            right: 2rem;
+        }
+        @include media-height(lg){
+            top: 7rem;
+            right: 2rem;
+        }
+    }
+
+    .header-title{
+        @include media-width(md){
+            font-size: 4rem;
+            line-height: 3.5rem;
+        } 
+        @include media-width(sm){
+            font-size: 3rem;
+            line-height: 2.5rem;
+        }
+        @include media-width(xs){
+            font-size: 2rem;
+            line-height: 1.8rem;
+        }
+
+        .name{
+            @include media-width(lg){
+                left: 0;
+            }
+            @include media-width(md){
+                left: 0;
+            }
+        }
+        .right{
+            @include media-width(lg){
+                right: 0;
+            }
+            @include media-width(md){
+                right: 0;
+            }
+        }
+        
+        .portrait{
+          @include media-width(md){
+                width: 100%;
+                height: 35rem;
+                min-width: unset;
+                margin: 0 auto;
+                margin: -4rem 0 -4rem 0;
+            }
+          @include media-width(xs){
+                width: 100%;
+                height: 35rem;
+                min-width: unset;
+                margin: 0 auto;
+                margin: -2rem 0 -2rem 0;
+            }
+        }
+    }
+
+    .triangle{
+        //WIDTH
+        @include media-width(md){
+            left: 2rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        @include media-width(xs){            
+            display: none;
+        }
+
+        //HEIGHT
+        @include media-height(md){            
+            top: 0;
+            left: 2rem;
+        }
+        @include media-height(lg){   
+            top: 7rem;
+            left: 2rem;
+        }
+    }
+}

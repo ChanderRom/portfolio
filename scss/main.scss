@@ -1,0 +1,55 @@
+@use 'mixins' as *;
+
+//FONTS
+@font-face {
+    font-family: 'Voyage';
+    src: url(../fonts/Voyage.otf);
+}
+
+//font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+// RESET
+
+//HIDE SCROLLBAR
+element {
+    -ms-overflow-style: none; /* Internet Explorer, Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow-y: scroll; 
+}
+
+element::-webkit-scrollbar {
+    display: none; /* Chrome Safari Opera*/
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li {
+    text-indent: 0;
+    list-style-type: 0;
+    list-style: none;
+}
+
+button,
+input{
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+main{
+    max-width: 1500px;
+    margin: 0 auto;
+}
