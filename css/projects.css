@@ -95,11 +95,11 @@ main {
 }
 .project .project-container h2 {
   font-family: "Voyage";
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: normal;
   width: 100%;
   padding: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   overflow: hidden;
 }
 .project .project-container h2 button {
@@ -108,9 +108,9 @@ main {
 }
 .project .project-container p {
   font-family: "Poppins";
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .project .project-container h3 {
   font-family: "Poppins";
@@ -118,14 +118,15 @@ main {
   font-weight: bold;
 }
 .project .project-container .github {
-  position: relative;
-  right: calc(180px - 100%);
   font-family: "Poppins";
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   padding: 1rem;
-  border: 1px solid black;
-  box-shadow: rgb(0, 0, 0) 5px 5px 1px;
+  position: relative;
+  right: calc(207px - 100%);
+  border: 1px solid white;
+  box-shadow: rgb(255, 255, 255) 5px 5px 1px;
+  color: white;
 }
 
 /*# sourceMappingURL=projects.css.map */

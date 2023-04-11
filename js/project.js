@@ -24,6 +24,13 @@ mediaDeskProject.add('(min-width: 680px', () => {
             rotate: 300,
             ease: 'power3'
         })
+        .from('.project-container', {
+            y: 100,
+            opacity: 0,
+            duration: 2,
+            stagger: .8,
+            ease: 'power3'
+        })
 })
 
 
@@ -31,13 +38,15 @@ mediaDeskProject.add('(min-width: 680px', () => {
 let projects = gsap.utils.toArray(".project-container");
 
 projects.forEach(project => {
-    let paragraph = project.querySelector('.paragraph')
-    let subtitle = project.querySelector('.subtitle')
-    let subparagraph = project.querySelector('.subparagraph')
-
     let tl = gsap.timeline({ paused: true })
 
-    tl.to(project, { duration: .8, height: 'auto', background: 'black', color: 'white', ease: 'power3' })
+    tl.to(project, {
+        duration: .8,
+        height: 'auto',
+        background: 'black',
+        color: 'white',
+        ease: 'power3'
+    })
 
     tl.reverse()
 

@@ -32,7 +32,6 @@ gsap.timeline()
         duration: 1,
         ease: "circ.out"
     }, 3)
-
     //CHARACTERS
     .to('.char', {
         y: 0,
@@ -55,7 +54,6 @@ welcomeBtn.addEventListener('click', () => {
             duration: 0.05,
             ease: "back.out(1.7)"
         })
-
         //TRIANGLES OUT
         .to('.triangle-left', {
             y: -400,
@@ -71,37 +69,25 @@ welcomeBtn.addEventListener('click', () => {
             rotate: 180,
             ease: "back.out(1.7)"
         }, .5)
-
-
         //COVER IN
         .to('.cover', {
             height: "100vh",
             ease: "circ.out",
-            duration: 1.5,
-            delay: .3
+            duration: 1
         })
 
         //HEADER CONTAINER IN
         .to('.header-container', {
             display: "flex"
         })
-
-        //DESCOMENTAR -------------------------------------------------------------
-        //ABOUT ME IN
-        // .to('.about-me', {
-        //     display: "block"
-        // })
-
         //INTRO OUT
         .to('.intro', {
             display: "none"
         })
-
         //HEADER CONTENT IN
         .to('.header-content', {
             display: "flex"
         })
-
         //CONTENT ANIMATION
         //TRIANGLE
         .from('.triangle', {
@@ -111,7 +97,6 @@ welcomeBtn.addEventListener('click', () => {
             duration: 1,
             rotation: 90
         })
-
         //PORTRAIT IN
         .from('.portrait', {
             ease: "power1",

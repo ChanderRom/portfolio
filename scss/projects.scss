@@ -43,10 +43,10 @@
         box-shadow: rgba(0, 0, 0, 1) 5px 5px 1px;
         
         h2{
-            @include font ('Voyage', 2rem, normal);
+            @include font ('Voyage', 2.2rem, normal);
             width: 100%;
             padding: .5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             overflow: hidden;
             
             button{
@@ -56,8 +56,8 @@
         }
 
         p{
-            @include font ('Poppins', 1rem, normal);
-            margin-bottom: 1rem;
+            @include font ('Poppins', 1.2rem, normal);
+            margin-bottom: 2rem;
         }
         
         h3{
@@ -65,12 +65,13 @@
         }
 
         .github{
-            position: relative;
-            right: calc(180px - 100%);
-            @include font ('Poppins', 1rem, normal);
+            @include font ('Poppins', 1.2rem, normal);
             padding: 1rem;
-            border: 1px solid black;
-            box-shadow: rgba(0, 0, 0, 1) 5px 5px 1px;
+            position: relative;
+            right: calc(207px - 100%);
+            border: 1px solid white;
+            box-shadow: rgb(255, 255, 255) 5px 5px 1px;
+            color: white;
         }
     }
 }
